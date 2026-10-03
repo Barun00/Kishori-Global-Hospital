@@ -1,0 +1,34 @@
+@import url(\'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap\');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{ --primary:#143856; --accent:#5ac8d0; }
+html{ scroll-behavior:smooth; }
+body{ background:#f8fcfd; color:#143856; font-family:\'Inter\',sans-serif; overflow-x:hidden; }
+a{ text-decoration:none !important; }
+h1,h2,h3{ color:#143856 !important; font-weight:800; }
+p{ color:#475569; line-height:1.6; }
+
+::-webkit-scrollbar{ width:8px; }
+::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,#143856,#2E8AA8); border-radius:10px; }
+
+/* Navbar Desktop/Mobile Fix - Tailwind ke bina 100% kaam karega */
+.site-header{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid #e2e8f0; }
+.desktop-menu{ display:none; }
+.mobile-menu{ display:flex; }
+@media (min-width:1024px){
+  .desktop-menu{ display:flex !important; }
+  .mobile-menu{ display:none !important; }
+}
+/* PREMIUM HOVER + SMOOTH SCROLL */
+html{ scroll-behavior: smooth; }
+a, button{ transition: all 0.3s ease !important; }
+a:hover{ opacity: 0.85; }
+
+/* Button Hover Premium */
+.primary-hover:hover{
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 30px rgba(20,56,86,0.3) !important;
+}
+.primary-hover:active{ transform: scale(0.97) !important; }
